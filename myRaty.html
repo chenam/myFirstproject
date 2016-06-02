@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>myRaty</title>
+<link href="css/raty.css"/>
+</head>
+<style>
+    .rate{
+        height: 16px;
+        overflow: hidden;
+    }
+    .rate span{
+        display: inline-block;
+        width:16px;
+        height: 16px;
+        cursor: pointer;
+        background: url("images/rate.png") no-repeat;
+    }
+    .rate .aastarover{
+        background-position: 0 -32px;
+    }
+    .rate .aastaroff{
+        background-position: 0 0px;
+    }
+    .rate .aastaron{
+        background-position: 0 -16px;
+    }
+</style>
+<body>
+
+<div class="rate">
+</div>
+    
+</body>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/rate.js"></script>
+<script>
+    $(".rate").rate({
+        number:6,
+        ons:0,
+        staron:'aastaron',
+        staroff:'aastaroff',
+        starover:'aastarover',
+        readonly:false
+    });
+</script>
+</html>
